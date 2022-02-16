@@ -1,11 +1,8 @@
-import './style.css';
-import deux from './pages/deux.js';
-import mountPage from './js/modules/page-handler.js'
-import indexPage from './pages/index-page.js'
+import deux from '../src/pages/deux.js';
+import mountPage from '../src/js/modules/page-handler.js'
+import indexPage from '../src/pages/index-page.js'
 
-
-
-function loadPages() {
+export default function loadPages() {
   const url = new URL(window.location.href);
   console.log('url: ', url)
   const path = url.pathname;
@@ -26,4 +23,3 @@ function loadPages() {
         `
   }
 }
- loadPages();
