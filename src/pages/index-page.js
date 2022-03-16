@@ -1,9 +1,26 @@
-export default function indexPage (url) {
-    const index =  `
-    <h1>Hello Vite!</h1>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-    <p>${url}</p>
-    <p>To page : <a href="./deux">DEUX</a></p>
-  `
-  return index;
+import { isAdHl } from '../js/modules/myDomHelper'
+import MyHeader from '../components/myHeader'
+import GoodPractice from '../components/goodPractice'
+
+// Define the new element
+customElements.define('my-header', MyHeader);
+customElements.define('good-practice', GoodPractice)
+
+// Create a class for the element
+export default class IndexPage extends HTMLElement {
+  constructor() {
+    // Always call super first in constructor
+    super();
+    isAdHl(this, 
+      'afterbegin',
+      `<my-header h1title="Your master heading here"></my-header>
+        <main>
+          <section>
+            <good-practice></good-practice>
+          </section>
+          <p>To the seconde page: <a href="/second-page">Second Page</a></p>
+        </main>
+        `);
+    }
   }
+

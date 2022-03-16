@@ -1,23 +1,27 @@
-import deux from '../src/pages/deux.js';
-import mountPage from '../src/js/modules/page-handler.js'
-import indexPage from '../src/pages/index-page.js'
+import IndexPage from '../src/pages/index-page.js';
+import SecondPage from '../src/pages/secondPage.js';
+import { dGEBId, dQSr } from '../src/js/modules/myDomHelper.js';
 
-export default function loadPages() {
+customElements.define('index-page', IndexPage);
+customElements.define('second-page', SecondPage);
+
+
+export default function navigator() {
+  const mount = dGEBId('app');
   const url = new URL(window.location.href);
-  console.log('url: ', url)
   const path = url.pathname;
-  console.log('path: ', path);
   switch(path){
     case '/':
-      console.log('log path', path);
-      mountPage(indexPage(url));
+      mount.innerHTML = '';
+      mount.innerHTML = '<index-page></index-page>'; 
       break;
-    case '/deux':
-      console.log(path);
+    case '/second-page':
+      mount.innerHTML = '';
+      mount.innerHTML = '<second-page></second-page>'
       mountPage(deux());
       break;
       default:
-        document.querySelector('#app').innerHTML = `
+        dQSr('#app').innerHTML = `
           <h1>ERROR 404</h1>
           <p>La page que vous cherchez n'existe pas</p>
         `
