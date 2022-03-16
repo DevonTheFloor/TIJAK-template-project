@@ -18,7 +18,6 @@ export default function navigator() {
     case '/second-page':
       mount.innerHTML = '';
       mount.innerHTML = '<second-page></second-page>'
-      mountPage(deux());
       break;
       default:
         dQSr('#app').innerHTML = `
