@@ -1,10 +1,6 @@
-import { isAdHl } from '../js/modules/myDomHelper'
-import MyHeader from '../components/myHeader'
-import GoodPractice from '../components/goodPractice'
-
-// Define the new element
-customElements.define('my-header', MyHeader);
-customElements.define('good-practice', GoodPractice)
+import { isAdHl } from '../js/modules/myDomHelper';
+import MyHeader from '../components/myHeader';
+import GoodPractice from '../components/goodPractice';
 
 // Create a class for the element
 export default class IndexPage extends HTMLElement {

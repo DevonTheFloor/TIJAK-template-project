@@ -1,7 +1,11 @@
-import './css/style.css';
+import '../src/sass/main.scss';
+import registrare from '../builders/components-loader'
+import navigator from '../builders/page-navigation.js'
 
-import navigator from '../controllers/page-loader.js'
+registrare()
 
-
-
- navigator();
+function complet() {
+  const h = location.hash;
+  navigator();
+}
+window.addEventListener('onhashchange', complet());
