@@ -1,12 +1,11 @@
 import { dGEBId, dQSr } from '../src/js/helpers/myDomHelper.js';
 import { insertPageInApp } from './mounting-page.js';
 
-export default function navigator() {
+function navigator() {
   //const mount = dGEBId('app'),
   const url = new URL(window.location.href),
     hach = url.hash,
     path = url.pathname;
-
 
   switch(hach){
     case '' :
@@ -38,4 +37,18 @@ export default function navigator() {
           <p>La page que vous cherchez n'existe pas</p>
         `
   }
+}
+export function activatedNavigator() {
+  setTimeout(()=>{
+    navigator();
+  },10)
+}
+
+export function listenForHash() {
+  const url = new URL(window.location.href),
+    hach = url.hash;
+  if(!hach) {
+    window.location.assign("#/");
+    activatedNavigator();
+  } 
 }
