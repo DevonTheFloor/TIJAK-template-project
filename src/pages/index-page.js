@@ -1,6 +1,4 @@
 import { isAdHl } from '../js/modules/myDomHelper';
-import MyHeader from '../components/myHeader';
-import GoodPractice from '../components/goodPractice';
 
 // Create a class for the element
 export default class IndexPage extends HTMLElement {
@@ -13,6 +11,11 @@ export default class IndexPage extends HTMLElement {
         <main>
           <section>
             <good-practice></good-practice>
+            <test-component 
+              texte="Coucou ça marche et ils flottent tous en bas !!!"
+              site="Mon Activité Web"
+              url="https://monactiviteweb.fr"
+            ></test-component>
           </section>
           <p>To the seconde page: <a href="/second-page">Second Page</a></p>
         </main>

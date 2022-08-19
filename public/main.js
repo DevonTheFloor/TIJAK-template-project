@@ -1,6 +1,6 @@
 import '../src/sass/main.scss';
-import registrare from '../builders/components-loader'
-import navigator from '../builders/page-navigation.js'
+import registrare from '../builders/components-loader';
+import navigator from '../builders/page-navigation.js';
 
 registrare()
 

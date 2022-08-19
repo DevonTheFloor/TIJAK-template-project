@@ -2,8 +2,8 @@ import { dGEBId, dQSr } from '../src/js/modules/myDomHelper.js';
 
 export default function navigator() {
   const mount = dGEBId('app'),
+  url = new URL(window.location.href),
     hach = url.hash,
-    url = new URL(window.location.href),
     path = url.pathname;
   switch(hach){
     case '' :

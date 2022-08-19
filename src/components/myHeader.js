@@ -15,9 +15,7 @@ export default class MyHeader extends HTMLElement {
       let h1title= this.getAttribute('h1title');
       h1.textContent = h1title;
       myheader.appendChild(h1);
-      
-    style.textContent = `
-      `;
+
     }
   }
 
