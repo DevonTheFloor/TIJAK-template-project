@@ -11,7 +11,7 @@ export default class IndexPage extends HTMLElement {
           <section>
             <good-practice></good-practice>
             <test-component 
-              texte="Coucou ça marche et ils flottent tous en bas !!!"
+              texte="Component created with new class TagInComponent, and the link below to and it's work"
               site="Mon Activité Web"
               url="https://monactiviteweb.fr"
             ></test-component>
