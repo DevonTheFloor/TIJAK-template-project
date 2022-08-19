@@ -6,6 +6,8 @@ registrare()
 
 function complet() {
   const h = location.hash;
-  navigator();
+  setTimeout(()=>{
+    navigator();
+  },10)
 }
 window.addEventListener('onhashchange', complet());
