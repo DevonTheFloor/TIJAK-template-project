@@ -8,4 +8,9 @@ export default class TestComponent extends HTMLElement {
     const ai = new TagInComponent('a', 'flink', 'mylink', this);
     ai.crelt();
   }
+
+  connectedCallback() {}
+  disconnectedCallback() {}
+  adoptedCallback() {}
+  attributeChangedCallback(name, oldValue, newValue) {}
 }
