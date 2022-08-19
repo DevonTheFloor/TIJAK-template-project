@@ -1,27 +1,34 @@
 import { dGEBId, dQSr } from '../src/js/modules/myDomHelper.js';
+import { insertPageInApp } from './mounting-page.js';
 
 export default function navigator() {
-  const mount = dGEBId('app'),
-  url = new URL(window.location.href),
+  //const mount = dGEBId('app'),
+  const url = new URL(window.location.href),
     hach = url.hash,
     path = url.pathname;
   switch(hach){
     case '' :
       console.log('hach vide: ', hach);
-      mount.innerHTML = '<index-page></index-page>'; 
+      //mount.innerHTML = '<index-page></index-page>'; 
+      insertPageInApp('<index-page></index-page>');
       break;
     case '#/' :
       console.log('hach vide: ', hach);
       //mount.innerHTML = '';
-      mount.innerHTML = '<index-page></index-page>'; 
+      //mount.innerHTML = '<index-page></index-page>'; 
+      insertPageInApp('<index-page></index-page>');
+
       break;
     case '#/second-page':
-      mount.innerHTML = '';
-      mount.innerHTML = '<second-page></second-page>'
+      //mount.innerHTML = '';
+      //mount.innerHTML = '<second-page></second-page>'
+      insertPageInApp('<second-page></second-page>');
+
       break;
     case '#/error':
       //mount.innerHTML = '';
-      mount.innerHTML = '<error-404></error-404>';
+      //mount.innerHTML = '<error-404></error-404>';
+      insertPageInApp('<error-404></error-404>');
       break;
       default:
         dQSr('#app').innerHTML = `

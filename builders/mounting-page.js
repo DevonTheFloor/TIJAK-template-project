@@ -8,5 +8,5 @@ export function mountingPageElements(mount, page) {
 export function insertPageInApp(page) {
   const mount = dGEBId('app');
   mount.innerHTML = '';
-  mount.insertAdjacentHTML('afternegin', page)
+  mount.innerHTML = page ;
 }
