@@ -4,10 +4,19 @@ import navigator from '../builders/page-navigation.js';
 
 registrare()
 
-function complet() {
-  const h = location.hash;
+function activatedNavigator() {
   setTimeout(()=>{
     navigator();
   },10)
 }
-window.addEventListener('onhashchange', complet());
+const url = new URL(window.location.href),
+hach = url.hash;
+if(!hach) {
+  window.location.assign("#/");
+  activatedNavigator();
+
+} 
+  window.addEventListener('hashchange',()=>{
+    activatedNavigator()
+  })
+

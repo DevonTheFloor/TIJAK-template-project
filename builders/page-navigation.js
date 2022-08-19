@@ -1,4 +1,4 @@
-import { dGEBId, dQSr } from '../src/js/modules/myDomHelper.js';
+import { dGEBId, dQSr } from '../src/js/helpers/myDomHelper.js';
 import { insertPageInApp } from './mounting-page.js';
 
 export default function navigator() {
@@ -6,6 +6,8 @@ export default function navigator() {
   const url = new URL(window.location.href),
     hach = url.hash,
     path = url.pathname;
+
+
   switch(hach){
     case '' :
       console.log('hach vide: ', hach);

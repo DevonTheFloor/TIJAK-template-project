@@ -1,4 +1,4 @@
-import { isAdHl } from '../js/modules/myDomHelper.js'
+import { isAdHl } from '../js/helpers/myDomHelper.js'
 import { please } from '../strings/indexText.js';
 
 

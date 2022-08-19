@@ -1,5 +1,5 @@
 // first import function
-import { isAdHl } from '../js/modules/myDomHelper'
+import { isAdHl } from '../js/helpers/myDomHelper'
 import { mountingPageElements } from '../../builders/mounting-page';
 //second import componan
 //import MyHeader from '../components/myHeader'
@@ -22,5 +22,11 @@ export default class SecondPage extends HTMLElement {
         </main>
         `);
     }
+
+    connectedCallback() {}
+    disconnectedCallback() {}
+    adoptedCallback() {}
+    attributeChangedCallback(name, oldValue, newValue) {}
+    
   }
 

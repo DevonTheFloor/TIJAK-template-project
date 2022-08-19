@@ -1,5 +1,5 @@
 import navigator from '../../builders/page-navigation';
-import { dCrEl } from '../js/modules/myDomHelper';
+import { dCrEl } from '../js/helpers/myDomHelper';
 
 export default class NattyLink extends HTMLElement {
   constructor() {

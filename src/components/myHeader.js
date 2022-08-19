@@ -1,4 +1,4 @@
-import { dCrEl } from '../js/modules/myDomHelper.js'
+import { dCrEl } from '../js/helpers/myDomHelper.js'
 
 // Create a class for the element
 export default class MyHeader extends HTMLElement {

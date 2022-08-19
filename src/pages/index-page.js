@@ -1,4 +1,4 @@
-import { dGEBId, isAdHl } from '../js/modules/myDomHelper';
+import { dGEBId, isAdHl } from '../js/helpers/myDomHelper';
 import { mountingPageElements } from '../../builders/mounting-page';
 import navigator from '../../builders/page-navigation';
 // Create a class for the element
@@ -17,20 +17,13 @@ export default class IndexPage extends HTMLElement {
               url="https://monactiviteweb.fr"
             ></test-component>
           </section>
-          <p>To the seconde page with Natty Link: 
-          <natty-link 
-            site="Seconde Page" 
-            url="#/second-page" 
-            choice=""
-          >
-          </natty-link></p>
+          <p>To the seconde page with window event call navigator:<a href="#/second-page">SEconde Page</a></p>
         </main>
         `);
        
     }
 
-    connectedCallback() {
-    }
+    connectedCallback() {}
     disconnectedCallback() {
 
     }
