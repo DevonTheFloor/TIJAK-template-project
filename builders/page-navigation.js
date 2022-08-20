@@ -50,5 +50,7 @@ export function listenForHash() {
   if(!hach) {
     window.location.assign("#/");
     activatedNavigator();
-  } 
+  } else {
+    activatedNavigator()
+  }
 }
