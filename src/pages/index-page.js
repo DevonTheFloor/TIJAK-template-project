@@ -14,6 +14,7 @@ export default class IndexPage extends HTMLElement {
               texte="Component created with new class TagInComponent, and the link below to and it's work"
               site="Mon Activité Web"
               url="https://monactiviteweb.fr"
+              titre="This is one title with TagInComponent, yeah!"
             ></test-component>
           </section>
           <p>To the seconde page with window event call navigator:<a href="#/second-page">SEconde Page</a></p>
