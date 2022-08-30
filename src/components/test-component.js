@@ -1,4 +1,4 @@
-import TagInComponent from "../js/TagInComponent";
+import TagInComponent from "../../builders/TagInComponent";
 
 export default class TestComponent extends HTMLElement {
   constructor() {
