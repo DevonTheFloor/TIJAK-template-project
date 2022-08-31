@@ -1,4 +1,4 @@
-import { dGEBId } from "../src/js/helpers/myDomHelper";
+import { dGEBId } from "../helpers/myDomHelper";
 import { linkImage } from "./handle-elements-page";
 
 export function mediaQueryForImages( breakPoint, targets) {

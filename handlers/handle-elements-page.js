@@ -1,4 +1,4 @@
-import { dGEBId, dQySrAl, gtEBCNa } from "../src/js/helpers/myDomHelper";
+import { dGEBId, dQySrAl, gtEBCNa } from "../helpers/myDomHelper";
 
 export function unlockSendButton(id, classMonitor) {
   const exe = dGEBId(id);
