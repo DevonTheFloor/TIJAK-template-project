@@ -13,3 +13,4 @@ export default class TestComponent extends HTMLElement {
   adoptedCallback() {}
   attributeChangedCallback(name, oldValue, newValue) {}
 }
+customElements.define('test-component', TestComponent);

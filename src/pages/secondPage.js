@@ -1,6 +1,8 @@
 // first import function
 import { mountingPageElements } from '../../builders/mounting-page';
 //second import componan
+import MyHeader from '../components/myHeader';
+
 //import MyHeader from '../components/myHeader'
 
 // Define the new element
@@ -28,4 +30,5 @@ export default class SecondPage extends HTMLElement {
     attributeChangedCallback(name, oldValue, newValue) {}
     
   }
+  customElements.define('second-page', SecondPage);
 

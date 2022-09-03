@@ -29,3 +29,4 @@ export default class NattyLink extends HTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {}
 }
 
+customElements.define('natty-link', NattyLink);

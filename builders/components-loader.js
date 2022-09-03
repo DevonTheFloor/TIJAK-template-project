@@ -6,10 +6,4 @@ import SecondPage from '../src/pages/secondPage';
 import NattyLink from '../src/components/natty-link';
 
 export default function registrare() {
-  customElements.define('my-header', MyHeader);
-  customElements.define('index-page', IndexPage);
-  customElements.define('good-practice', GoodPractice);
-  customElements.define('test-component', TestComponent);
-  customElements.define('second-page', SecondPage);
-  customElements.define('natty-link', NattyLink);
 }

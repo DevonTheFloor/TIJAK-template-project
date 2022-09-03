@@ -1,4 +1,9 @@
 import { mountingPageElements } from '../../builders/mounting-page';
+import MyHeader from '../components/myHeader';
+import GoodPractice from '../components/goodPractice';
+import TestComponent from '../components/test-component';
+
+
 // Create a class for the element
 export default class IndexPage extends HTMLElement {
   constructor() {
@@ -30,3 +35,4 @@ export default class IndexPage extends HTMLElement {
     attributeChangedCallback(name, oldValue, newValue) {}
   }
 
+  customElements.define('index-page', IndexPage);

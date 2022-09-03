@@ -13,3 +13,4 @@ export default class GoodPractice extends HTMLElement {
     )
   }
 }
+customElements.define('good-practice', GoodPractice);

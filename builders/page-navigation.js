@@ -1,14 +1,11 @@
 import { insertPageInApp } from './mounting-page.js';
+import { navi } from '../navigator-conf';
 
-export function navigator(...pages) {
+export function navigator() {
   const url = new URL(window.location.href),
     hach = url.hash,
     path = url.pathname;
-    console.log('7');
-    const pa = pages.find(p => p.uri === hach);
-    console.log('9');
-    console.log('PA:',pa);
-    console.log('pa page: ', pa.page);
+    const pa = navi.find(p => p.uri === hach);
     insertPageInApp(pa.page)
     
 
@@ -44,24 +41,24 @@ export function navigator(...pages) {
         window.scroll(0, 0);
   }*/
 }
-export function activatedNavigator(...pages) {
+export function activatedNavigator() {
   setTimeout(()=>{
-    navigator(...pages);
+    navigator();
   },10)
 }
 
-export function listenForHash(...pages) {
+export function listenForHash() {
   const url = new URL(window.location.href),
     hach = url.hash;
   if(!hach) {
     window.location.assign("#/");
-    activatedNavigator(...pages);
+    activatedNavigator();
   } else {
-    activatedNavigator(...pages)
+    activatedNavigator()
   }
 }
-export function listenForHashInIndex(...pages) {
+export function listenForHashInIndex() {
   window.addEventListener('hashchange',()=>{
-    activatedNavigator(...pages)
+    activatedNavigator()
   })  
 }
