@@ -1,4 +1,4 @@
-import { dCrEl } from '../js/helpers/myDomHelper';
+import { dCrEl } from '../../helpers/myDomHelper';
 
 export default class NattyLink extends HTMLElement {
   constructor() {

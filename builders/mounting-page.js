@@ -1,4 +1,4 @@
-import { dGEBId } from "../src/js/helpers/myDomHelper"
+import { dGEBId } from '../helpers/myDomHelper';
 
 export function mountingPageElements(mount, page) {
   mount.insertAdjacentHTML('afterbegin', page)

@@ -1,12 +1,23 @@
 import '../src/sass/main.scss';
 import registrare from '../builders/components-loader';
-import {activatedNavigator, listenForHash} from '../builders/page-navigation.js';
+import { listenForHash, listenForHashInIndex } from '../builders/page-navigation.js';
+
+const a = { 
+  uri: '', 
+  page: '<index-page></index-page>' 
+},
+z = { 
+  uri: '#/', 
+  page: '<index-page></index-page>' 
+},
+e = { 
+  uri: '#/second-page', 
+  page: '<second-page></second-page>' 
+};
 
 registrare()
 
+listenForHash(a,z,e)
 
-listenForHash()
-window.addEventListener('hashchange',()=>{
-  activatedNavigator()
-})
+listenForHashInIndex(a,z,e)
 

@@ -1,12 +1,19 @@
-import { dQSr } from '../src/js/helpers/myDomHelper.js';
 import { insertPageInApp } from './mounting-page.js';
 
-function navigator() {
+export function navigator(...pages) {
   const url = new URL(window.location.href),
     hach = url.hash,
     path = url.pathname;
+    console.log('7');
+    const pa = pages.find(p => p.uri === hach);
+    console.log('9');
+    console.log('PA:',pa);
+    console.log('pa page: ', pa.page);
+    insertPageInApp(pa.page)
+    
 
-  switch(hach){
+  /*switch(hach){
+
     case '' :
       console.log('hach vide: ', hach);
       insertPageInApp('<index-page></index-page>');
@@ -19,9 +26,9 @@ function navigator() {
       window.scroll(0, 0);
 
       break;
-    case '#/second-page':
+    case '#/'+siteMap.uri:
 
-      insertPageInApp('<second-page></second-page>');
+      insertPageInApp(siteMap.page);
 
       break;
     case '#/error':
@@ -35,21 +42,26 @@ function navigator() {
           <p>La page que vous cherchez n'existe pas</p>
         `;
         window.scroll(0, 0);
-  }
+  }*/
 }
-export function activatedNavigator() {
+export function activatedNavigator(...pages) {
   setTimeout(()=>{
-    navigator();
+    navigator(...pages);
   },10)
 }
 
-export function listenForHash() {
+export function listenForHash(...pages) {
   const url = new URL(window.location.href),
     hach = url.hash;
   if(!hach) {
     window.location.assign("#/");
-    activatedNavigator();
+    activatedNavigator(...pages);
   } else {
-    activatedNavigator()
+    activatedNavigator(...pages)
   }
+}
+export function listenForHashInIndex(...pages) {
+  window.addEventListener('hashchange',()=>{
+    activatedNavigator(...pages)
+  })  
 }

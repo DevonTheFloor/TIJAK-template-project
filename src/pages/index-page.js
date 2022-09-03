@@ -1,4 +1,3 @@
-import { dGEBId, isAdHl } from '../js/helpers/myDomHelper';
 import { mountingPageElements } from '../../builders/mounting-page';
 // Create a class for the element
 export default class IndexPage extends HTMLElement {

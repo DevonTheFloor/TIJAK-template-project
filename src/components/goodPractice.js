@@ -1,5 +1,5 @@
-import { isAdHl } from '../js/helpers/myDomHelper.js'
-import { please } from '../strings/indexText.js';
+import { isAdHl } from '../../helpers/myDomHelper';
+import { please } from '../strings/indexText'
 
 
 export default class GoodPractice extends HTMLElement {

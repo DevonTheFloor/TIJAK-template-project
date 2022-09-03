@@ -1,5 +1,4 @@
 // first import function
-import { isAdHl } from '../js/helpers/myDomHelper'
 import { mountingPageElements } from '../../builders/mounting-page';
 //second import componan
 //import MyHeader from '../components/myHeader'
