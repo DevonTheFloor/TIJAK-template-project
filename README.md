@@ -1,5 +1,5 @@
-# Multi pages vite vanilla project starter   
+# TIJAk project template   
    
-This repo is a starter pack for create a vite.js multi pages project with vanilla JS and native Web Components.
+This repo is a starter pack for create a vite.js project with TIJAK library.
 
 
