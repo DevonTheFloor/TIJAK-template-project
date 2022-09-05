@@ -1,4 +1,4 @@
-import TagInComponent from "../../builders/TagInComponent";
+import {TagInComponent} from 'tijak';
 
 export default class TestComponent extends HTMLElement {
   constructor() {

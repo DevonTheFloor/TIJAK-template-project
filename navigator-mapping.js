@@ -1,7 +1,7 @@
 import IndexPage from "./src/pages/index-page";
 import SecondPage from "./src/pages/secondPage";
 
-export const navi = [
+export const mapping = [
   { 
     uri: '', 
     page: '<index-page></index-page>' 

@@ -1,4 +1,4 @@
-import { mountingPageElements } from '../../builders/mounting-page';
+import { build } from 'tijak';
 import MyHeader from '../components/myHeader';
 import GoodPractice from '../components/goodPractice';
 import TestComponent from '../components/test-component';
@@ -9,7 +9,7 @@ export default class IndexPage extends HTMLElement {
   constructor() {
     // Always call super first in constructor
     super();
-    mountingPageElements(this,
+    build.mountingPageElements(this,
       `<my-header h1title="Your master heading here"></my-header>
         <main>
           <section>

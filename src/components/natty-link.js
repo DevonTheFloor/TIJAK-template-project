@@ -1,9 +1,9 @@
-import { dCrEl } from '../../helpers/myDomHelper';
+import { hlp } from 'tijak';
 
 export default class NattyLink extends HTMLElement {
   constructor() {
     super();
-    const link = dCrEl('a');
+    const link = hlp.dCrEl('a');
     this.createAttributeForLink(link);
     this.appendChild(link);
     link.addEventListener('click',()=>{

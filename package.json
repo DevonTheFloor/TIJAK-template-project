@@ -9,5 +9,8 @@
   "devDependencies": {
     "sass": "^1.54.3",
     "vite": "^2.8.0"
+  },
+  "dependencies": {
+    "tijak": "^1.0.1"
   }
 }

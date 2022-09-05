@@ -1,17 +1,17 @@
-import { dCrEl, dGEBId } from '../../../js/helpers/myDomHelper';
+import { hlp } from 'tijak';
 import style from './my-input.scss';
 
 export default class MyInput extends HTMLElement {
   constructor () {
     super();
 
-    const label = dCrEl('label');
+    const label = hpl.dCrEl('label');
     this.appendChild(label);
     const labelTxt = this.getAttribute('labelTxt');
     label.textContent = labelTxt;
     const labId = this.getAttribute('labId');
     label.id = labId;
-    const myInput = dCrEl('input');
+    const myInput = hlp.dCrEl('input');
     let inpId = this.getAttribute('inpId');
     myInput.id = inpId;
     myInput.name = inpId;
@@ -33,7 +33,7 @@ export default class MyInput extends HTMLElement {
       myInput.title = info;
     }
     label.appendChild(myInput);
-    const spanError = dCrEl('span');
+    const spanError = hlp.dCrEl('span');
     const idTagMesg = `err${inpId}`;
     spanError.id = idTagMesg;
     spanError.setAttribute('class','errMsg');
@@ -47,8 +47,8 @@ export default class MyInput extends HTMLElement {
 
   verifyField (idCible,idTagMessage, myRegex, messageError) {
     console.log('In Verif');
-    let cible = dGEBId(idCible);
-    let tagMessage = dGEBId(idTagMessage);
+    let cible = hlp.dGEBId(idCible);
+    let tagMessage = hlp.dGEBId(idTagMessage);
     cible.addEventListener('focus', function () {
       let cv = cible.value;
       tagMessage.innerHTML = '';
