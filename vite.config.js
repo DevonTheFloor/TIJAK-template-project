@@ -1,8 +1,17 @@
-import { defineConfig } from 'vite'
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
   server: {
     open: 'index.html'
+  },
+  build: {
+    lib: {
+      entry: resolve(__dirname, 'tijak/index.js'),
+      name: 'Tijak',
+      // the proper extensions will be added
+      fileName: 'tijak'
+    }
   },
   css: {
     preprocessorOptions: {
