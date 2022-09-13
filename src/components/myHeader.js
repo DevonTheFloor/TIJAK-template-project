@@ -1,4 +1,4 @@
-import { hlp } from 'tijak';
+import { dCrEl } from "../../tijak/helpers/myDomHelper";
 
 // Create a class for the element
 export default class MyHeader extends HTMLElement {
@@ -7,10 +7,10 @@ export default class MyHeader extends HTMLElement {
     super();
     // Create a shadow root
     const shadow = this.attachShadow({mode: 'open'});
-    const myheader = hlp.dCrEl('header');
+    const myheader = dCrEl('header');
     shadow.appendChild(myheader);
       //creat <h1></h1>
-      const h1 = hlp.dCrEl('h1');
+      const h1 = dCrEl('h1');
       myheader.appendChild(h1);
       let h1title= this.getAttribute('h1title');
       h1.textContent = h1title;

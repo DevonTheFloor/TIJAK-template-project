@@ -1,8 +1,7 @@
 import '../src/sass/main.scss';
-import { navig } from 'tijak';
+import { listenForHash, listenForHashInIndex } from '../tijak/builders/page-navigation';
 
+listenForHash();
 
-navig.listenForHash()
-
-navig.listenForHashInIndex()
+listenForHashInIndex();
 

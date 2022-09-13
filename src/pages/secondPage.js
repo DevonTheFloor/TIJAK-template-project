@@ -1,5 +1,5 @@
 // first import function
-import { build } from 'tijak';
+import { mountingPageElements } from '../../tijak/builders/mounting-page';
 //second import componan
 import MyHeader from '../components/myHeader';
 
@@ -12,7 +12,7 @@ export default class SecondPage extends HTMLElement {
   constructor() {
     // Always call super first in constructor
     super();
-    build.mountingPageElements(
+    mountingPageElements(
       this,
       `<my-header h1title="Second Page"></my-header>
         <main>

@@ -1,11 +1,11 @@
-import { hlp } from 'tijak';
-import { please } from '../strings/indexText'
+import { isAdHl } from '../../tijak/helpers/myDomHelper';
+import { please } from '../strings/indexText';
 
 
 export default class GoodPractice extends HTMLElement {
   constructor() {
     super();
-    hlp.isAdHl(this,
+    isAdHl(this,
       'afterbegin',
       `<article>
         ${please}
