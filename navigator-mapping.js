@@ -1,5 +1,4 @@
-import IndexPage from "./src/pages/index-page";
-import SecondPage from "./src/pages/secondPage";
+import { registerPages } from "./tijak-register";
 
 export const mapping = [
   { 

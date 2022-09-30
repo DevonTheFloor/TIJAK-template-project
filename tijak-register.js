@@ -1,15 +1,14 @@
 import MyHeader from './src/components/myHeader/my-header';
-import MyNavMenu from './src/components/myNavMenu/my-nav-menu';
-import MyFooter from './src/components/myFooter/my-footer';
-
+import GoodPractice from './src/components/goodPractices/good-practice';
 //pages
-import IndexPage from "./src/pages/index-page";
-import SecondePage from "./src/pages/second-page";
+import IndexPage from './src/pages/index-page';
+import SecondPage from './src/pages/second-page';
+
 
 export const registerComponents = [
   MyHeader,
-  MyNavMenu,
-  MyFooter
+  GoodPractice
+
 ]
 
 export const registerPages = [

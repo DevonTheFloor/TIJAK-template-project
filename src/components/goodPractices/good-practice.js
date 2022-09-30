@@ -1,5 +1,5 @@
-import { isAdHl } from '../../tijak/helpers/myDomHelper';
-import { please } from '../strings/indexText';
+import { isAdHl } from '../../../../tijak/helpers/myDomHelper';
+import { please } from '../../strings/indexText';
 
 
 export default class GoodPractice extends HTMLElement {

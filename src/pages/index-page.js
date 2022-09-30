@@ -1,7 +1,4 @@
-import  {mountingPageElements} from '../../tijak/builders/mounting-page';
-import MyHeader from '../components/myHeader';
-import GoodPractice from '../components/goodPractice';
-import TestComponent from '../components/test-component';
+import  { mountingPageElements } from '../../tijak/builders/mounting-page';
 
 
 // Create a class for the element
@@ -10,7 +7,10 @@ export default class IndexPage extends HTMLElement {
     // Always call super first in constructor
     super();
     mountingPageElements(this,
-      `<my-header h1title="Your master heading here"></my-header>
+      `
+      <header>
+      <my-header h1-first="Your master heading here"></my-header>
+      </header>
         <main>
           <section>
             <good-practice></good-practice>

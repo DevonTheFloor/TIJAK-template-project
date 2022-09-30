@@ -1,11 +1,6 @@
 // first import function
 import { mountingPageElements } from '../../tijak/builders/mounting-page';
-//second import componan
-import MyHeader from '../components/myHeader';
 
-//import MyHeader from '../components/myHeader'
-
-// Define the new element
 
 // Create a class for the element
 export default class SecondPage extends HTMLElement {
@@ -14,7 +9,11 @@ export default class SecondPage extends HTMLElement {
     super();
     mountingPageElements(
       this,
-      `<my-header h1title="Second Page"></my-header>
+      `
+      <header>
+        <my-header h1-first="Second Page"></my-header>
+
+      </header>
         <main>
           <section>
             <h2>This is the second page</h2>
