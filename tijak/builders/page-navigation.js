@@ -19,6 +19,14 @@ export function navigator() {
     }
 }
 
+function withoutParam(splitor) {
+  if (splitor.length >=3 && splitor[2] === "") {
+    return true
+  } else {
+    return false;
+  }
+}
+
 function mapForHashUrl(url) {
   let pa = mapping.find(p => p.uri === url);
   console.log('PA :', pa);
